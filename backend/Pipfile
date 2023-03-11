@@ -10,6 +10,8 @@ djangorestframework-simplejwt = "*"
 mysql-connector-python = "*"
 django-cors-headers = "*"
 tzdata = "*"
+django-admin = "*"
+startapp = "*"
 
 [dev-packages]
 autopep8 = "*"

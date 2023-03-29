@@ -28,10 +28,10 @@ def posted_comments(request, videoId):
         serializer.save(user = request.user)
         return Response(serializer.data, status = status.HTTP_201_CREATED)
 
-   #elif request.method == 'GET':
-    #    comments = Comment.objects.filter(video_id = request.videoId)
-     #   serializer = CommentSerializer(comments, many = True)
-      #  return Response(serializer.data, status = status.HTTP_200_OK)
+    elif request.method == 'GET':
+        comments = Comment.objects.filter(video_id = request.videoId)
+        serializer = CommentSerializer(comments, many = True)
+        return Response(serializer.data, status = status.HTTP_200_OK)
     
 
 

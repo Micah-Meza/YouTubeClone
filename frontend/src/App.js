@@ -15,20 +15,16 @@ import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 function App() {
   return (
     <div>
       <Navbar />
+      <SearchBar />
+      <YouTubePage />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <PrivateRoute>
-              <YouTubePage />
-            </PrivateRoute>
-          }
-        />
+        <Route path="/" element={ <PrivateRoute> <HomePage /> </PrivateRoute> } />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/addCar" element={<PrivateRoute><AddCarPage /></PrivateRoute>} />

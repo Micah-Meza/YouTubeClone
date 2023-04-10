@@ -6,9 +6,9 @@ const SearchResultsPage= () => {
     const {id}= useParams()
     const [movie, setMovieData] = useState([])
 
-    const getMovieDetails = async () => {
+    const getVideoDetails = async () => {
         try {
-            let response = await axios.get(`http://127.0.0.1:8000/api/movie_list/${id}/`);
+            let response = await axios.get(`http://127.0.0.1:8000/api/comments/7qrRzNidzIc/`);
             console.log("Second call movie data details.", response.data)
             setMovieData(response.data)
 
@@ -18,18 +18,17 @@ const SearchResultsPage= () => {
     }
     
     useEffect(() => {
-        getMovieDetails()
+        getVideoDetails()
     }, []);
 
     return ( 
         <div>
-              <h1>{movie.title}</h1>
-                        <h2>{movie.year}</h2>
-                        <img src={movie.poster_url} />
-                        <p>{movie.plot}</p>
-                        <h3>{movie.rating}</h3>
+              <h1>{video.name}</h1>
+                        <h2>{video.video_id}</h2>
+                        <img src={video.id} />
+                        <p>{video.text}</p>
         </div>
      );
 }
  
-export default MovieDetails;
+export default SearchResultsPage;

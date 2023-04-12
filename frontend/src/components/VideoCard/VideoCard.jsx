@@ -18,7 +18,7 @@ const VideoCard = (props) => {
      </>
     );
     } else {
-      return <h1> Not Available</h1>
+      return <h4> Not Available</h4>
     } 
        
   }

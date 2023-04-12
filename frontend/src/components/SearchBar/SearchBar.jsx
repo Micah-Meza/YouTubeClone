@@ -7,7 +7,7 @@ const SearchBar = (props) => {
 
     const handleChange = (event) => {
       event.preventDefault();
-      setSearchInput(event.target.value);
+      props.getVideoDetails(searchInput);
     };
     
 
